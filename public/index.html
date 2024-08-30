@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootcamp APIs</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="./alpineData.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="alpineData.js"></script>
 </head>
-
 <body>
     <h1 style="color: black; text-align: center">Bootcamp API</h1>
     <div class="container">
+       
         <div class="widget" x-data="wordGameWidget">
-            <h2>Words Widget</h2>
+            <h2>Sentence Widget</h2>
             <input type="text" x-model="sentence" placeholder="Enter a sentence">
             <button @click="analyzeSentence">Analyze</button>
             <p>Longest Word Length: <span x-text="result.longestWord"></span></p>
@@ -23,13 +22,14 @@
             <p>Sum of Word Lengths: <span x-text="result.sum"></span></p>
         </div>
 
+       
         <div class="widget" x-data="phoneBillWidget">
             <h2>Phone Bill Widget</h2>
             <input type="text" x-model="bill" placeholder="Enter call and sms commands">
             <button @click="getTotalBill">Calculate Bill</button>
-            <p>Total Bill: R<span x-text="total"></span></p>
+            <p x-text="billMessage"></p>
 
-             <h3>Set Prices</h3>
+            <h3>Set Prices</h3>
             <input type="number" x-model="callPrice" placeholder="Call Price">
             <button @click="setPrice('call', callPrice)">Set Call Price</button>
             <input type="number" x-model="smsPrice" placeholder="SMS Price">
@@ -37,14 +37,14 @@
             <p x-text="priceMessage"></p>
         </div>
 
+       
         <div class="widget" x-data="enoughAirtimeWidget">
             <h2>Enough Airtime Widget</h2>
             <input type="text" x-model="usage" placeholder="Enter usage projection">
             <input type="number" x-model="available" placeholder="Enter available airtime">
             <button @click="checkEnoughAirtime">Check Airtime</button>
-            <p>Remaining Airtime: R<span x-text="result"></span></p>
+            <p x-text="airtimeMessage"></p>
         </div>
     </div>
 </body>
-
 </html>

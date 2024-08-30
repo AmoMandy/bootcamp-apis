@@ -1,43 +1,66 @@
-/* Global styles */
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-image: url('https://th.bing.com/th/id/OIP.QBQbSlS0aVLTV4gqhseDbQAAAA?rs=1&pid=ImgDetMain');
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://th.bing.com/th/id/OIP.zFz31bh1yHtIpJFatjjADAHaFc?rs=1&pid=ImgDetMain') no-repeat center center fixed;
     background-size: cover;
+    color: #333;
 }
 
+h1 {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+}
 
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-    justify-content: space-around;
-    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
-
-
 .widget {
-    background-color: aqua;
-    max-width: 400px;
-    width: 100%;
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid #ddd;
-    border-radius: 2em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
 }
 
+.widget h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
 
-@media (min-width: 600px) {
-    .container {
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    
-    .widget {
-        margin: 1em;
-    }
+.widget input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.widget button {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.widget button:hover {
+    background-color: #34495e;
+}
+
+.widget p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
 }
